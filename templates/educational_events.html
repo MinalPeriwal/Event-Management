@@ -17,6 +17,15 @@
       justify-content: center;
      
     }
+    .nav {
+            color: #cccccc;
+            display: flex;
+            padding-left: 400px;
+            gap: 10px;
+        }
+        a{
+          color: white;
+        }
 
     body::before {
       content: "";
@@ -101,6 +110,12 @@
   </style>
 </head>
 <body>
+  <div class="form-container">
+     <div class="nav">
+        <a href="/index">Home</a>
+        <a href="/about">About us</a>
+        <a href="/contact">Contact us</a>
+    </div>
   <div class="form-container">
     <h4 class="mb-3"> 📚 Educational Event <strong>{{ username }}</strong></h4>
     <h3 class="mb-4">Ignite Minds. Inspire Futures</h3>
