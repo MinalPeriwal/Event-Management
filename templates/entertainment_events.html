@@ -17,7 +17,16 @@
       justify-content: center;
       backdrop-filter: blur(2px);
     }
-
+    
+.nav {
+            color: #cccccc;
+            display: flex;
+            padding-left: 400px;
+            gap: 10px;
+        }
+        a{
+          color: white;
+        }
     body::before {
       content: "";
       position: absolute;
@@ -101,6 +110,12 @@
   </style>
 </head>
 <body>
+  <div class="form-container">
+     <div class="nav">
+        <a href="/index">Home</a>
+        <a href="/about">About us</a>
+        <a href="/contact">Contact us</a>
+     </div>
   {% if messages %}
 <script>
   {% for message in messages %}
