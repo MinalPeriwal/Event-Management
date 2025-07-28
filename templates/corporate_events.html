@@ -26,6 +26,15 @@
       backdrop-filter: blur(4px);
       z-index: 0;
     }
+    .nav {
+            color: #cccccc;
+            display: flex;
+            padding-left: 400px;
+            gap: 10px;
+        }
+        a{
+          color: white;
+        }
 
     .form-container {
       background: rgba(255, 255, 255, 0.1);
@@ -101,6 +110,12 @@
   </style>
 </head>
 <body>
+  <div class="form-container">
+     <div class="nav">
+        <a href="/index">Home</a>
+        <a href="/about">About us</a>
+        <a href="/contact">Contact us</a>
+     </div>
   <div class="form-container">
     <h4 class="mb-3"> Welcome, <strong>{{ username }}</strong></h4>
     <h3 class="mb-4">Plan with us</h3>
