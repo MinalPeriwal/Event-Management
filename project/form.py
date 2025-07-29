@@ -6,6 +6,7 @@ from .models import HealthEvent
 from .models import EntertainmentEvent
 from .models import CorporateEvent
 from .models import EducationalEvent
+from .models import DandiyaBooking
 
 class SocialEventForm(forms.ModelForm):
     class Meta:
@@ -36,3 +37,8 @@ class EducationalEventForm(forms.ModelForm):
     class Meta:
         model = EducationalEvent
         fields = ['name', 'email', 'phone', 'event_type', 'no_of_attendees', 'event_date', 'message']
+
+class DandiyaBookingForm(forms.ModelForm):
+    class Meta:
+        model = DandiyaBooking
+        fields = ['name', 'email', 'service_type', 'booking_datetime']
