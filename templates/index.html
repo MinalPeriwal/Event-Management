@@ -137,76 +137,190 @@
     </div>
   </div>
 </div>
-<section class="py-5" style="background-color: #fceffe;">
+<section class="word-cloud-section">
+  <a href="{% url 'social_events' %}">
+  <h2 class="section-title">Social Events</h2>
+ 
 
-
-
-   <div class="cloud d-flex flex-wrap" style="align-items: flex-start; padding-left: 60px; gap: 1rem;">
-  <a href="{% url 'corporate_events' %}">
-    <h2 class="text-start" style="color: #5e148b; font-weight: 700;">Corporate</h2>
-    <h4 class="text-start" style="color: crimson; font-weight: 700;">Events</h4>
-  </a>
-  <span class="word small" style="padding-left:350" >Seminar</span>
-  <span class="word large" style="font-weight: 800;padding-left:370px;">Inauguration</span>
-  <span class="word xl" style="padding-left:390px">Team Outing</span>
-  <span class="word medium" style="padding-left:350px">Networking</span>
-  <span class="word medium" style="padding-left:370px">Conference</span>
-  <span class="word medium" style="color: green;padding-left:390px">Award ceremony</span>
-  <span class="word xxl"style="padding-left:410px">CSR</span>
-  <span class="word small"style="padding-left:350">Product Launch</span>
-  <span class="word small"style="padding-left:370px">Cultural Day</span>
-  <span class="word medium" style="color: maroon;padding-left:390px">Training</span>
-</div>
+  <div class="word-cloud">
+    <span class="word large black">Birthday Parties</span>
+    <span class="word medium red">weddings</span>
+    <span class="word xlarge violet">Baby Showers</span>
+    <span class="word medium orange">Naming Ceremony</span>
+    <span class="word small skyblue">Graduation/Farewell party</span>
+    <span class="word small purple">Anniversary Celebration</span>
+    <span class="word medium navy">Get-Together and Reunion</span>
+    <span class="word medium green">Retirement Parties</span>
+  </div>
 </section>
+</a>
+<section class="word-cloud-section">
+  <a href="{% url 'corporate_events' %}">
+  <h2 class="section-title">Corporate Events</h2>
+ 
 
+  <div class="word-cloud">
+    <span class="word large black">Inauguration</span>
+    <span class="word medium red">Seminar</span>
+    <span class="word xlarge violet">Team Outing</span>
+    <span class="word medium orange">Networking</span>
+    <span class="word small skyblue">Family Day</span>
+    <span class="word small purple">Annual Day</span>
+    <span class="word medium navy">CSR</span>
+    <span class="word medium green">Award ceremony</span>
+    <span class="word medium orange">Product Launch</span>
+    <span class="word small teal">Cultural Day</span>
+    <span class="word medium maroon">Training</span>
+    <span class="word medium pink">Conference</span>
+  </div>
+</section>
+</a>
 
-<!-- Styles for Word Cloud -->
+<section class="word-cloud-section">
+  <a href="{% url 'seasonal_events' %}">
+  <h2 class="section-title">Seasonal Events</h2>
+ 
+
+  <div class="word-cloud">
+    <span class="word large black">New Year Parties</span>
+    <span class="word medium red">Diwali Parties</span>
+    <span class="word xlarge violet">Halloween Parties</span>
+    <span class="word medium orange">Republic Day</span>
+    <span class="word small skyblue">Independence Day</span>
+    <span class="word small purple">Navratri and Dandiya Night</span>
+    <span class="word medium navy">CSR</span>
+    <span class="word medium green">Award ceremony</span>
+    <span class="word medium orange">christmas parties</span>
+  </div>
+</section>
+</a>
+</div>
+<div class="d-flex">
+<section class="word-cloud-section">
+  <a href="{% url 'entertainment_events' %}">
+  <h2 class="section-title">Entertainment Events</h2>
+ 
+
+  <div class="word-cloud">
+    <span class="word large black">Music Events</span>
+    <span class="word medium red">Standup Events</span>
+    <span class="word xlarge violet">Fashion Shows</span>
+    <span class="word medium orange">Film Promotions</span>
+    <span class="word small skyblue">Fan Meet and Greet</span>
+    <span class="word small purple">Instrumental Event</span>
+    <span class="word medium navy">Roadshows</span>
+    <span class="word medium green">Influencers Meet</span>
+    <span class="word medium orange">Celebrity parties</span>
+  </div>
+</section>
+</a>
+<section class="word-cloud-section">
+  <a href="{% url 'health_events' %}">
+  <h2 class="section-title">Health Events</h2>
+ 
+
+  <div class="word-cloud">
+    <span class="word large black">Health Camps</span>
+    <span class="word medium red">Yoga and Meditation</span>
+    <span class="word xlarge violet">Blood Donation Drives</span>
+    <span class="word medium orange">NGO and fundraising event</span>
+  </div>
+</section>
+</a>
+<section class="word-cloud-section">
+  <a href="{% url 'educational_events' %}">
+  <h2 class="section-title">Educational Events</h2>
+ 
+
+  <div class="word-cloud">
+    <span class="word large black">Annual Days</span>
+    <span class="word medium red">Convocations</span>
+    <span class="word xlarge violet">Workshop and Training</span>
+    <span class="word medium orange">Career Fairs</span>
+    <span class="word small skyblue">Debate and Quiz</span>
+    <span class="word small purple">Hacekethons</span>
+    <span class="word medium navy">College Fests</span>
+    <span class="word medium green">Interschool Competitions</span>
+  </div>
+</section>
+</a>
+</div>
 <style>
-  .cloud {
-    flex-direction:unset;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
+.word-cloud-section {
+  background-color: #fcecff;
+  text-align: center;
+  padding: 80px 10px;
+  position: relative;
+}
 
-  .word {
-    font-family: 'Poppins', sans-serif;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+.section-title {
+  color: #d60000;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
 
-  .word:hover {
-    transform: scale(1.2);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  }
+.cloud-label {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  transform: translateY(-50%);
+  text-align: left;
+}
 
-  .small {
-    font-size: 16px;
-    padding-left: 250px;
-  }
+.cloud-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a1b9a;
+  display: block;
+}
 
-  .medium {
-    font-size: 20px;
-  padding-left: 300px;
-  }
+.cloud-subheading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: crimson;
+  text-decoration: underline;
+}
 
-  .large {
-    font-size: 26px;
-    padding-left: 400px;
-    color: #7d3cff;
-  }
+.word-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
-  .xl {
-    font-size: 30px;
-    padding-left: 350px;
-    color: #6c5ce7;
-  }
-  .xxl{
-    font-size: 35px;
-    color: darkblue;
-  }
+.word {
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s;
+  cursor: default;
+}
+
+.word:hover {
+  transform: scale(1.1);
+}
+
+/* Font Sizes */
+.xlarge { font-size: 2.2rem; font-weight: bold; }
+.large { font-size: 1.8rem; font-weight: 600; }
+.medium { font-size: 1.5rem; font-weight: 500; }
+.small { font-size: 1.1rem; font-weight: 400; }
+
+/* Colors */
+.red { color: #e53935; }
+.orange { color: #fb8c00; }
+.green { color: #43a047; }
+.teal { color: #00897b; }
+.skyblue { color: #29b6f6; }
+.pink { color: #f06292; }
+.purple { color: #ab47bc; }
+.navy { color: #283593; }
+.maroon { color: #6d1b7b; }
+.black { color: #000000; }
+.violet { color: #7e57c2; }
+
 </style>
 
 </body>
