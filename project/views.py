@@ -19,7 +19,10 @@ from .form import HealthEventForm
 from .form import EntertainmentEventForm
 from .form import CorporateEventForm
 from .form import EducationalEventForm
-
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+from .models import DandiyaBooking
 
 # Create your views here.
 def index(request):
@@ -230,3 +233,20 @@ def educational_events(request):
 # TESTING TEXT RESPONSE
 def get_response(request):
     return HttpResponse("This is the get_response view.")
+
+@csrf_exempt
+def save_booking(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        datetime = data.get('datetime')
+
+        DandiyaBooking.objects.create( datetime=datetime)
+
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'}, status=400)
+
+def DandiyaBooking(request):
+    return render(request, "dandiya.html")
+
+def dandiya_page(request):
+    return render(request, 'dandiya.html')
